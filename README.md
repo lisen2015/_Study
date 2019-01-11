@@ -164,6 +164,19 @@ var b = a.fn;
 b.call(a,1,2);
 ```
 
+#### 示例 3
+``` javascript
+var a = {
+    user:"我是谁",
+    fn:function(){
+        console.log(this.user); //你管我是谁
+    }
+}
+var b = a.fn;
+var obj = {user: "你管我是谁?"}
+b.call(obj);
+```
+
 ### `>>> apply()`
 
 #### 示例 1
@@ -310,4 +323,6 @@ d();//2
     2、如果两个对象互相引用，但是没有被第3个对象所引用，那么这两个互相引用的对象也会被回收。
 
     
+> 乱七八糟 
+
 <a href="./part-1.js">part-1.js</a>
